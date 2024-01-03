@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Today from "./pages/Today";
+import Develope from "./pages/Develope";
+import Webd from "./pages/Webd";
+import Website from "./pages/Website";
+import Gsap from "./pages/Gsap";
+import Port from "./pages/Port";
+import Youtube from "./pages/Youtube";
+import Channel from "./pages/Channel";
+import Video from "./pages/Video";
+import Search from "./pages/Search";
+import Not from "./pages/Not";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/today" element={<Today />} />
+        <Route path="/develop" element={<Develope />} />
+        <Route path="/webd" element={<Webd />} />
+        <Route path="/website" element={<Website />} />
+        <Route path="/gsap" element={<Gsap />} />
+        <Route path="/port" element={<Port />} />
+        <Route path="/youtube" element={<Youtube />} />
+        <Route path="/channel/:channelId" element={<Channel />} />
+        <Route path="/video/:videoId" element={<Video />} />
+        <Route path="/search/:searchId" element={<Search />} />
+        <Route path="*" element={<Not />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

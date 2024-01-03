@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "DNFForgedBlade";
+  font-style: normal;
+  font-weight: 300;
+  src: url("//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Light.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "DNFForgedBlade";
+  font-style: normal;
+  font-weight: 500;
+  src: url("//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Medium.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "DNFForgedBlade";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.df.nexon.com/img/common/font/DNFForgedBlade-Bold.otf")
+    format("opentype");
+}
+
+:root {
+  --point1: #1e1d1dd1;
+  --point2: #3c3a3ad1;
+  --point3: #f8f6f6d1;
+  --point4: #fcfcfcd1;
+
+  font-family: DNFForgedBlade;
+  font-size: 10px;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+body {
+  background-color: var(--point1);
+  color: var(--point4);
+}
