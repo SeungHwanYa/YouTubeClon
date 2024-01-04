@@ -3,7 +3,7 @@ footer {
   background-color: var(--point1);
   border-top: 1px solid (var--point1);
   padding: 20px;
-  margin-right: 260px;
+  margin-left: 260px;
   width: calc(100% - 260px);
   color: var(--point2);
   font-size: 0.8rem;

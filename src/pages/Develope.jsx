@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Main from "../section/Main";
 
 import { developerText } from "../data/develop";
@@ -7,6 +7,17 @@ import { Link } from "react-router-dom";
 import "../css/developer_page.css";
 
 export default function Develope() {
+  const Developer = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 300);
+    }, []);
+
+    const developerPageClass = loading ? "isLoading" : "isLoaded";
+  };
   return (
     <Main>
       <section>

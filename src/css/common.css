@@ -39,3 +39,11 @@ body {
   background-color: var(--point1);
   color: var(--point4);
 }
+.isLoading {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.isLoaded {
+  opacity: 1;
+  transition: opacity 0.5s;
+}

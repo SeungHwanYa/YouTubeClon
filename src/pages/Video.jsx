@@ -1,12 +1,6 @@
-import Main from "../section/Main";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Video() {
-  return (
-    <Main
-      title="유튜브 비디오 영상"
-      description="유튜브 비디오 영상을 볼 수 있습니다."
-    >
-      Video
-    </Main>
-  );
+  return <>video</>;
 }

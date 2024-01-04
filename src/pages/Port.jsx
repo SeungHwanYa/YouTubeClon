@@ -1,28 +1,29 @@
 import Main from "../section/Main";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { portfolioText } from "../data/portfolio";
-import { Link } from "react-router-dom";
+import VideoCard from "../contents/VideoCard";
 
 export default function Port() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 300);
+  }, []);
+
+  const portPageClass = loading ? "isLoading" : "isLoaded";
   return (
     <Main
       title="포트폴리오 사이트"
       description="포트폴리오 사이트 튜토리얼 강의입니다."
     >
-      <section>
+      <section className={portPageClass}>
         <h2 className="pageN"> 포트폴리오 만드는 방법을 공유합니다.</h2>
         <div className="pageW">
           <div className="pageI">
-            {portfolioText.map((video, key) => (
-              <div className="pageV" key={key}>
-                <div className="pageT">
-                  <Link to={`/video/${video.videoId}`}>
-                    <img src={video.img} alt={video.title} />
-                  </Link>
-                </div>
-              </div>
-            ))}
+            <VideoCard videos={portfolioText} />
           </div>
         </div>
       </section>

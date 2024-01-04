@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { todayText } from "../data/today";
 import { Link } from "react-router-dom";
 
 import "../css/today.css";
 
-export default function Today_Contents() {
+export default function Today_Contents({ videos, id }) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 300);
+  }, []);
+
+  const todayClass = loading ? "isLoading" : "isLoaded";
+
   return (
     <section>
       <div className="today_inner">
