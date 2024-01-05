@@ -1,3 +1,10 @@
+.wrap_to {
+  padding: 0 50px 0 50px;
+}
+.toname {
+  font-size: 3rem;
+  padding: 30px 0 30px 30px;
+}
 .today_inner {
   display: flex;
   background-color: var(--point2);

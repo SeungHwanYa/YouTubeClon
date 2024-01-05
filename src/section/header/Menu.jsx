@@ -15,7 +15,7 @@ export default function Menu() {
       <ul className="menu">
         <li className="active">
           <Link to="/">
-            <CiBaseball /> 웹스토리보이
+            <CiBaseball /> Home
           </Link>
         </li>
         <li>
@@ -55,9 +55,6 @@ export default function Menu() {
         </li>
       </ul>
       <ul className="keyword">
-        <li>
-          <Link to="/search/webstoryboy">webstoryboy</Link>
-        </li>
         <li>
           <Link to="/search/html">HTML</Link>
         </li>
